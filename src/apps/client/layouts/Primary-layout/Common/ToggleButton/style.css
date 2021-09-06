@@ -1,0 +1,28 @@
+.common-toggle-button{
+    display: none; align-items: center; justify-content: center; 
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 28px;
+    color: #efefef;
+    border: solid 1px #efefef;
+    transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.tcommon-toggle-button:hover{
+    font-size: 28px;
+    color: white;
+    border: solid 1px #eee;
+    color: rgb(255, 255, 255);
+    border: solid 1px rgb(255, 255, 255);
+}
+
+
+@media only screen and (max-width: 960px){
+    .common-toggle-button{
+        display: flex;
+    }
+    
+}

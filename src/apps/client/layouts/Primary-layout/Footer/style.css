@@ -1,0 +1,9 @@
+
+#primary-footer{
+    width: 100%; height: fit-content;
+    background-color: var(--main-color);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    width: 100%; height: fit-content;
+}

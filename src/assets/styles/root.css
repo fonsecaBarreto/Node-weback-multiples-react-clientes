@@ -1,0 +1,43 @@
+
+:root {
+    --main-color: #007CDC;
+    --main-light-color: #1388e2;
+    --main-bg-color: #E3EDFF;
+    --second-color: rgb(8, 62, 122);
+    --header-height-desktop: 72px;
+    --header-height-bodile: 72px;
+}
+
+body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; 
+}
+
+.flex-row, .flex-column{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+}
+  
+.flex-aln-center { align-items: center;  }
+.flex-column{  flex-direction: column; }
+.flex-row { flex-direction: row; }
+  
+@media only screen and (min-width: 961px){
+    .mobile-only{
+        display: none!important;
+    }
+}
+
+@media only screen and (max-width: 960px){
+    .desktop-only{
+        display: none!important;
+    }
+
+}
+
+.ml-auto  {  margin-left: auto; }
+.mr-0 { margin-right: 0; }

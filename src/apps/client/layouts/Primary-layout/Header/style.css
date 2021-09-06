@@ -1,0 +1,40 @@
+/* Header */
+header#primary-header{
+    width: 100%; height: fit-content;
+    background-color: rgb(0, 0, 0,0);
+    background-color: transparent;
+    display: flex;flex-direction: column; justify-content: flex-start;
+    transition: all .3s; 
+}
+
+ header#primary-header.colorful{
+    background-color: var(--main-color);
+    transition: all .5s;
+}
+
+.primary-header-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    border: solid 2px red;
+    gap: 12px;
+    height: var(--header-height);
+}
+
+.primary-header-content > section {
+    display: flex; align-items: center; justify-content: flex-start; 
+    flex-direction: row;
+    padding: 0 18px;
+}
+.primary-header-content > section:nth-child(1) .ph-logo {
+    width: 194px;
+    transform: translateY(2px);
+    cursor: pointer;
+}
+
+
+.primary-header-content > section:nth-child(2) {
+    display: flex; align-items: center; justify-content: flex-end; 
+}
+

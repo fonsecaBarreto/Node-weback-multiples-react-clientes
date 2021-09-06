@@ -1,0 +1,7 @@
+.App, .App * {
+    box-sizing: border-box;
+    height: fit-content;
+    font-family: "Montserrat", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: solid 2px green;
+}
+  
