@@ -1,9 +1,6 @@
 import React from 'react'
 import './style.css'
-import Logo from '../../../../../../assets/logo2.svg'
-
-/*
-import SocialMediaNav from './FooterContent/SocialMediaNav'  */
+import Logo from '../../../../../../assets/images/logo2.svg'
 import ContactList from './ContactList'
 import SocialMediaNav from './SocialMediaNav'
 export default () =>{

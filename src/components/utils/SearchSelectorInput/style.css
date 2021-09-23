@@ -1,0 +1,22 @@
+@keyframes showSmotthUp {
+    0% { opacity: .3;}
+    100% { opacity: 1;}
+  }
+
+.search-selector-input{
+    position: relative;
+    width: 100%;
+}
+
+/* disabled */
+.search-selector-input.disabled{
+    position: relative!important;
+}
+
+.search-selector-input.disabled::after{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(206, 206, 206, 0.4);
+}

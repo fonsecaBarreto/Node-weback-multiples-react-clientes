@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
-import './app.css';
-import Routes from './pages/routes'
+import '../../assets/styles/root.css'
+import '../../assets/styles/fonts.css'
+import './app.css'
+import Routes from './routes'
+import { PROVIDERS_PAGES, PAGES_STRUCT } from './pagesManifest'
 
 export default class App extends Component {
-
-
   render() {
-  
     return (
-      <div>
-          <h1> Olá sou  a pagina do Fornecedor </h1>
-
-          <Routes></Routes>  
+      <div className="App">
+          <Routes pages={PROVIDERS_PAGES} struct={PAGES_STRUCT}></Routes>  
       </div>
     );
   }

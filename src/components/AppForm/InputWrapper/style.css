@@ -1,0 +1,97 @@
+.input-wrapper{
+    display: flex; flex-direction: column; align-items: flex-start;
+    width: 100%; height: 100%;
+}
+
+.input-wrapper label{
+    width: fit-content; font-size: 14px;
+    line-height: 1em;
+    margin-bottom: 4px;
+    color: rgb(12, 48, 116);
+    font-weight: bold;
+    padding-left: 2px;
+}
+
+.input-wrapper select, 
+.input-wrapper textarea, 
+.input-wrapper input[type=text], 
+.input-wrapper input[type=number], 
+.input-wrapper input[type=password], 
+.input-wrapper .text-input{
+    height: 38px; width: 100%;
+    line-height: 1em;
+    border-radius: 5px;
+    border: solid 1px #ccc;
+    border-bottom: solid 1px #bbb ;
+    font-size: 16px;
+    padding: 0 10px;
+    color: #111;
+    background-color: white;
+}
+
+.input-wrapper input[type=checkbox]{
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    width: 18px;
+    height: 18px;
+    border: solid 1px #bbb;
+    color: #222;
+    margin-right: 6px;
+}
+
+.input-wrapper textarea{
+    height: unset;
+    min-height: 96px;
+    padding: 8px 12px;
+}
+
+/* warning */
+.input-wrapper.warning input, .input-wrapper.warning textarea {
+    outline: none;
+    box-shadow: 0 0 0 2px rgb(160, 9, 47,.2);
+}
+
+/* focus */
+.input-wrapper textarea, .input-wrapper input:focus{
+    outline: none;
+    box-shadow: 0 0 0 1px rgba(54, 107, 231, 0.3);
+    transition: all .2s ease-in-out;
+}
+
+.input-wrapper-error{
+    color: rgb(160, 9, 47);
+    font-size: 15px;
+    line-height: 1.1em;
+    margin-top: 2px;
+    margin-left: auto;
+    margin-right: 0;
+    text-align: center;
+    width: fit-content;
+    background-color: rgba(228, 215, 221, 0.35);
+    padding: 4px 20px;
+    border-radius: 0;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    text-align: left;
+}
+
+
+@media only screen and (max-width: 756px){
+    .input-wrapper select, textarea, input[type=text], input[type=password], .text-input{
+        padding: 0 10px;
+    }
+    .input-wrapper select{
+
+        padding: 12px 8px;
+    }
+
+    .input-wrapper select, 
+    .input-wrapper textarea, 
+    .input-wrapper input[type=text], 
+    .input-wrapper input[type=number], 
+    .input-wrapper input[type=password], 
+    .input-wrapper .text-input{
+        height: 42px
+    }
+}

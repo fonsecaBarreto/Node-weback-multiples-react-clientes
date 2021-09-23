@@ -4,8 +4,13 @@
     --main-light-color: #1388e2;
     --main-bg-color: #E3EDFF;
     --second-color: rgb(8, 62, 122);
-    --header-height-desktop: 72px;
-    --header-height-bodile: 72px;
+    --header-height-desktop: 56px;
+    --header-height-mobile: 60px;
+
+
+
+
+
 }
 
 body {

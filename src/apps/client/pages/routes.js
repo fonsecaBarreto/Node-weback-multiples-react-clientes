@@ -7,30 +7,29 @@ import PrimaryLayout from '../layouts/Primary-layout'
 import HomePage from './Home'
 import Login from './Login'
 import NotFound from './NotFound'
-
 /* guard */
+import Guard from './RouteGuard';
 function Routes (){
   return ( 
     <Router>
+        <Switch>
 
- 
-      <Switch>
+          <Route path="/" exact> <Redirect to="/inicio" /> </Route>
+          <Route path="/notfound" exact>  <NotFound> </NotFound></Route>
 
-        <Route path="/" exact> <Redirect to="/inicio" /> </Route>
+          <Guard path="/inicio" exact>
+            <PrimaryLayout>
+              <HomePage> </HomePage> 
+            </PrimaryLayout>
+          </Guard>
 
-        <Route path="/inicio" exact>
-          <PrimaryLayout>
-            <HomePage> </HomePage> 
-          </PrimaryLayout>
-        </Route>
+          <Guard path="/login" exact>  <Login> </Login></Guard>
 
-        <Route path="/login" exact>  <Login> </Login></Route>
 
-        <Route path="/notfound" exact>  <NotFound> </NotFound></Route>
+          <Route path="/*" > <Redirect to="/notfound" /> </Route>  
+          
+        </Switch>
 
-        <Route path="/*" > <Redirect to="/notfound" /> </Route>  
-        
-      </Switch>
     </Router>
   )
 }

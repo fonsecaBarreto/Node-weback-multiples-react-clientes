@@ -7,16 +7,16 @@
     column-gap: 22px;
     height: 100px;
     background-color:var(--main-color);
-    height: 232px;
+    height: 220px;
     font-weight: 400;
-    border: solid 2px red;
+  
 }
 
 .primary-layout-footer-content section{
     display: flex; flex-direction: column; align-content: flex-start; justify-content: flex-start;
     width: 100%; height: fit-content;
     overflow-x: hidden;
-    padding: 32px ; gap: 10px
+     gap:10px;
 }
 
 
@@ -62,7 +62,7 @@ ul.primary-layout-footer-contact li{
     width: 100%;
     text-align: center;
     color: white;
-    font-size: 18px;
+    font-size: 17px;
     padding: 4px 0;
     column-gap: 20px;
 }

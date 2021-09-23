@@ -5,8 +5,8 @@ import FooterContent from './FooterContent'
 export default ({ }) => {
     return (
         <footer id="primary-footer" >
-            <FooterContent></FooterContent>
-            <FooterConsideration></FooterConsideration>
+           <FooterContent></FooterContent>
+            <FooterConsideration></FooterConsideration> 
         </footer>
     )
 }

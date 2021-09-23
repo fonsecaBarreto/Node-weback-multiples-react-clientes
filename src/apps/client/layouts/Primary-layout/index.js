@@ -1,19 +1,24 @@
-import React, { Children } from 'react'
+import React, { useState } from 'react'
 import './style.css'
-/* import Footer from './Footer'
-*/
+import Footer from './Footer'
 import Header from './Header' 
+import Menu from './Menu'
 
+export default ({ children }) =>{
+    const [ showMenu, setShowMenu ] = useState(false)
 
-export default ({children}) =>{
+    const toggleMenu = () =>{
+        setShowMenu(!showMenu)
+    }
+    
     return (
-        <div className="primary-layout">
-            <Header></Header>
-            <main id="primary-main-content">
+        <div className="client-primary-layout">
+            <Menu toggleMenu={toggleMenu} show={showMenu}></Menu>
+            <Header toggleMenu={toggleMenu}></Header> 
+            <main >
                 {children}
             </main>
-           {/* 
-            <Footer></Footer> */}
+            <Footer></Footer>  
         </div>
     )
 }

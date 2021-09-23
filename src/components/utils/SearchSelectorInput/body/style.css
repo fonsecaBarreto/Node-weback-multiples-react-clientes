@@ -1,0 +1,53 @@
+.search-selector-input .ssi-body{
+    position: absolute;
+    top: 100%; left: 0;
+    display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;
+    width: 100%;
+    max-height: 0;
+    background-color: rgb(255, 255, 255);
+    height: 0;
+    overflow-y: auto;
+    transition: all .2s;
+    z-index: 999;
+}
+
+.search-selector-input .ssi-body.show{
+    height: fit-content;
+    max-height: 240px;
+    box-shadow: 0px 2px 3px 2px #0004;
+}
+
+.search-selector-input .ssi-item-wrapper{
+    display: flex; flex-direction: row;
+    align-items: center;
+    width: 100%;
+    animation-name: slideUp;
+    animation-duration: .5s;
+    animation-timing-function: ease ;
+    cursor: default;
+    text-align: left;
+    min-height: 36px;
+    user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
+    padding: 0 12px 0 32px;
+    font-weight: bold;
+}
+
+.search-selector-input .ssi-item-wrapper:hover{
+    outline: solid 2px rgb(58, 108, 150,.3);
+    background-color: rgba(97, 156, 190, 0.2);
+}
+
+
+.search-selector-input .ssi-item-wrapper.option-muted{
+    gap: 5px;
+    color: #888;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+
+

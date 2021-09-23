@@ -38,24 +38,20 @@ module.exports = {
     extensions: ['*', '.js', '.jsx']
   },
   devServer: {
+    open:true,
     port: 3000,
+    disableHostCheck: true,
+    useLocalIp: true,
+    inline: true,
+    host: "0.0.0.0",
     historyApiFallback:{
       disableDotRule: false,
       rewrites: [
         { from: "^/provider", to: '/provider' },
         { from: "^/admin", to: '/admin' },
         { from: "^/", to :"/client"}, 
-       /*  { from: /^\/$/, to :"/client"},
-        { from: /^\/outro\/.*$/, to: '/admin' },
-        { from: /^\/$/, to: '/views/landing.html' },
-        { from: /^\/subpage/, to: '/views/subpage.html' },
-        { from: /./, to: '/views/404.html' }, */
       ]
     }
-    /* {
-      disableDotRule: false,
-      index: './client/index.html'
-    } */
   },
   plugins: [
     new CleanWebpackPlugin([outputDirectory]),
@@ -87,3 +83,10 @@ module.exports = {
   ],
 
 };
+
+
+       /*  { from: /^\/$/, to :"/client"},
+        { from: /^\/outro\/.*$/, to: '/admin' },
+        { from: /^\/$/, to: '/views/landing.html' },
+        { from: /^\/subpage/, to: '/views/subpage.html' },
+        { from: /./, to: '/views/404.html' }, */

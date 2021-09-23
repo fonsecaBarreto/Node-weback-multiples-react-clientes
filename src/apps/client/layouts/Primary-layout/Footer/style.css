@@ -6,4 +6,6 @@
     grid-template-columns: 1fr;
     grid-template-rows: auto auto;
     width: 100%; height: fit-content;
+
 }
+

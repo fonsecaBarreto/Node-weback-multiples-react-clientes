@@ -14,12 +14,11 @@ header#primary-header{
 
 .primary-header-content{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
     grid-template-rows: 1fr;
     align-items: center;
-    border: solid 2px red;
     gap: 12px;
-    height: var(--header-height);
+    height: var(--header-height-desktop);
 }
 
 .primary-header-content > section {
@@ -29,7 +28,7 @@ header#primary-header{
 }
 .primary-header-content > section:nth-child(1) .ph-logo {
     width: 194px;
-    transform: translateY(2px);
+    transform: translateY(4px);
     cursor: pointer;
 }
 
@@ -38,3 +37,9 @@ header#primary-header{
     display: flex; align-items: center; justify-content: flex-end; 
 }
 
+@media screen and (max-width: 960px) {
+    
+    header#primary-header{
+        background-color: var(--main-color);
+    }
+}

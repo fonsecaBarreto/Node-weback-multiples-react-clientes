@@ -1,30 +1,15 @@
-import React, { Component } from 'react';
-export default () =>{
+import React, { useEffect, useRef, useState } from "react"
+import './style.css'
+import { withRouter } from 'react-router-dom'
+import HeadLine from "./HeadLine"
+import PerksRow from './PerksRow'
+export default withRouter(({history}) =>{
+
+
     return (
-        <div>
-            <h1> MINHA HOME PAGE AQUI, OBG! </h1>
-            <h1> MINHA HOME PAGE AQUI, OBG! </h1>
-            <h1> MINHA HOME PAGE AQUI, OBG! </h1>
-            <h1> MINHA HOME PAGE AQUI, OBG! </h1>
-            <h1> MINHA HOME PAGE AQUI, OBG! </h1>
-            <h1> MINHA HOME PAGE AQUI, OBG! </h1>
-            <h1> MINHA HOME PAGE AQUI, OBG! </h1>
-            <h1> MINHA HOME PAGE AQUI, OBG! </h1>
-            <h1> MINHA HOME PAGE AQUI, OBG! </h1>
-            <h1> MINHA HOME PAGE AQUI, OBG! </h1>
-            <h1> MINHA HOME PAGE AQUI, OBG! </h1>
-            <h1> MINHA HOME PAGE AQUI, OBG! </h1>
-            <h1> MINHA HOME PAGE AQUI, OBG! </h1>
-            <h1> MINHA HOME PAGE AQUI, OBG! </h1>
-            <h1> MINHA HOME PAGE AQUI, OBG! </h1>
-            <h1> MINHA HOME PAGE AQUI, OBG! </h1>
-            <h1> MINHA HOME PAGE AQUI, OBG! </h1>
-            <h1> MINHA HOME PAGE AQUI, OBG! </h1>
-            <h1> MINHA HOME PAGE AQUI, OBG! </h1>
-            <h1> MINHA HOME PAGE AQUI, OBG! </h1>
-            <h1> MINHA HOME PAGE AQUI, OBG! </h1>
-            <h1> MINHA HOME PAGE AQUI, OBG! </h1>
-            <h1> MINHA HOME PAGvE AQUI, OBG! </h1>
+        <div id="home-page">
+            <HeadLine></HeadLine>
+            <PerksRow></PerksRow>
         </div>
     )
-}
+})

@@ -4,13 +4,15 @@
     height: fit-content;
     padding: 10px 0;
     background-color: rgb(44, 44, 44);
+    font-weight: 300;
 }
 .primary-layout-footer-consideration p {
     color: rgb(228, 228, 228);
     font-size: 15px;
     line-height: 20px;
     padding: 0;
-    margin: 0 auto
+    margin: 0 auto;
+    text-align: center
 }
 
 @media only screen and (max-width: 960px){

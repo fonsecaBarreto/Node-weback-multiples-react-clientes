@@ -1,57 +1,46 @@
 import React, { useEffect, useState } from 'react'
 import './style.css'
 import NavListLink from './NavListLink'
-import { useHistory } from 'react-router-dom'
-import ActionButton from '../../Common/ActionButton'
+import ActionButton from '../Common/ActionButton'
 import { FaUserCircle } from 'react-icons/fa'
-import 'react-router-dom'
+import { useHistory, useLocation} from 'react-router-dom'
+import { ImEnter, ImExit, ImHome } from 'react-icons/im'
+import { AiOutlineForm } from 'react-icons/ai'
+import { FaRegHandshake } from 'react-icons/fa'
 
-const NAV = [
-    { to:"/inicio", label: "Inicio" },
-    { to:"/inicio/#objetivos", label: "Objetivos" },
-    { to:"/inicio/#sobre", label: "Sobre" }
+const ITEMS = [
+    { to:"/inicio", hash:"",           label: "Inicio", icon: <ImHome></ImHome>},
+    { to:"/inicio", hash:"#objetivos", label: "Objetivos", icon:<FaRegHandshake></FaRegHandshake> },
+    { to:"/inicio", hash:"#cadastrar", label: "Cadastrar-se", icon: <AiOutlineForm></AiOutlineForm> }
 ]
 
 export default ({ mart, className }) =>{
 
     const history = useHistory()
-    const [currentPage, setCurrentPage ] = useState(null)
-    const goTo = (to) => {  history.push(to)  } 
+    const location = useLocation()
+    const [currentPage, setCurrentPage ] = useState(['',''])
+
+    const goTo = (to, hash) => {  
+        history.push({ pathname: to, hash})
+    } 
 
     useEffect(()=>{
-        console.log("Meu saco mano")
-    })
+        setCurrentPage([location.pathname, location.hash])
+    },[location])
 
-    useEffect(()=>{
-        console.log(history.location)
-        if(["/inicio",'/inicio/'].includes(history.location.pathname) ){
-            setCurrentPage(history.location.pathname+history.location.hash)
-        }
-        else{ setCurrentPage(history.location.pathname)}
-    },[history.location, history.location.pathname, history.location.hash])
-
-    const history = useHistory()
-
-    
     return (
-        <nav className={`main-page-navigator ${className}`}>
+        <nav className={`primary-page-navigator ${className}`}>
             <section>
- 
                 <ul>
-                    { NAV.map((item, i) =>( <NavListLink onClick={goTo} {...item} key={i} selected={currentPage === item.to ? true : false}> </NavListLink> ))}
+                    { ITEMS.map((item, i) =>( <NavListLink {...item} key={i} onClick={goTo}  current={currentPage} > </NavListLink> ))}
                 </ul>
-
-          
             </section>
 
             <section>
-
-                {currentPage}
-          {/*       {JSON.stringify(currentPage)} */}
                 {mart ?
                     <ActionButton icon={<FaUserCircle></FaUserCircle>} label={"Area do Cliente"} onClick={()=>goTo('/marts/orcamento')}></ActionButton>
                     :
-                    <ActionButton label={"Entrar"} onClick={()=>goTo('/login')}></ActionButton>
+                    <ActionButton icon={<ImEnter></ImEnter>} label={"Entrar"} onClick={()=>goTo('/login')}></ActionButton>
                 }
             </section>
         </nav>

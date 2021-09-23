@@ -1,0 +1,43 @@
+.primary-menu{
+    padding: 32px 0;
+    margin-left: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    box-shadow: unset;
+
+    z-index: 999!important;
+    background-color: var(--main-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 2px 4px 4px #0004;
+    transition: margin .24s;
+}
+
+.primary-menu > section{
+    width: 100%;
+    padding: 0 32px;
+    height: 72px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    border: solid 2x red;
+}
+
+@media only screen and (max-width: 960px){  
+
+    .primary-menu{
+        padding: 0px 0;
+        height: 100%;
+    }
+    .primary-menu.show { 
+        margin-left: calc(100% - 260px);
+      
+    }
+
+    
+}
+
